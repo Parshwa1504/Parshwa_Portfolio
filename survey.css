@@ -1,0 +1,39 @@
+:root { --gmu-green:#006633; --gmu-yellow:#FFCC33; }
+    body { background:#f2f3f3; }
+    h1 { color: var(--gmu-green); }
+    .cs-heading-box{
+      background:#fff;
+      border:5px solid var(--gmu-green);
+      border-radius:.5rem;
+      box-shadow:0 10px 28px rgba(0,0,0,.12);
+      padding:1.5rem 2rem;
+    }
+    /* Visually indicate required fields */
+    label.req::after{ content:" *"; color:#c0392b; font-weight:700; }
+    .form-control:required, .form-select:required{
+      border-left:4px solid var(--gmu-yellow);
+    }
+
+    /* Make checkboxes/radios clearly visible when unchecked */
+.form-check-input[type="checkbox"],
+.form-check-input[type="radio"]{
+  border: 2px solid #000 !important;   /* strong black border */
+  width: 1.05em;
+  height: 1.05em;
+  margin-top: .25rem;                   /* nicer vertical alignment */
+  box-shadow: none;
+  background-color: #fff;               /* keep a white fill when unchecked */
+  accent-color: var(--gmu-green);       /* GMU green when checked (modern browsers) */
+}
+
+/* Keep border when checked, and fill with GMU green */
+.form-check-input:checked{
+  background-color: var(--gmu-green) !important;
+  border-color: #000 !important;
+}
+
+/* Subtle focus ring so keyboard users can see focus */
+.form-check-input:focus{
+  box-shadow: 0 0 0 .15rem rgba(0,0,0,.12);
+  border-color: #000 !important;
+}

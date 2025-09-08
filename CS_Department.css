@@ -1,0 +1,22 @@
+    /* --- Page-specific styling to satisfy the rubric --- */
+    :root { --gmu-green:#006633; --gmu-yellow:#FFCC33; }
+    body { background:#f2f3f3; }               /* light gray page background */
+    h1 { color: var(--gmu-green); }            /* GMU green h1 rule */
+
+    .cs-heading-box{
+      background:#fff;
+      border:5px solid var(--gmu-green);
+      border-radius:.5rem;
+      box-shadow:0 10px 28px rgba(0,0,0,.12);
+      padding:2rem;
+    }
+    .cs-lead { color:#1f3c36; }
+    .badge-gmu { background: var(--gmu-yellow); color:#1b1b1b; }
+    .list-check li { margin-bottom:.35rem; }
+    .list-check li::marker { color: var(--gmu-green); }
+    .degree-table th { background:#e9efe9; color:#143b2f; }
+    .cta-survey a{ background: var(--gmu-yellow); border:none; color:#1a1a1a;}
+    .cta-survey a:hover{ filter:brightness(.95); color:#000; }
+    hr { border-top: 2px solid rgba(0,0,0,.15); }
+    .cs-heading-box ol { counter-reset: item; }
+    .cs-heading-box ol > li { line-height: 1.7; }

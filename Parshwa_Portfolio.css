@@ -1,0 +1,374 @@
+/* ================= base palette ================= */
+:root{
+  --ink:#1f6b63;      /* teal headings */
+  --ink-2:#215a55;    /* section titles */
+  --band:#ded9d2;     /* warm gray band */
+  --page:#eff3f3;     /* very light page bg */
+  --footer:#1e4f4a;   /* deep teal footer */
+  --border:rgba(0,0,0,.06);
+}
+
+/* smooth scroll + crisp text */
+html{ scroll-behavior:smooth; }
+body.bg-page{
+  background:var(--page);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Anchor targets don’t hide under sticky header */
+section{ scroll-margin-top: 72px; }
+
+/* ================= header / nav ================= */
+/* sticky, even spacing, and subtle blur so it “sits” above the hero */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: saturate(180%) blur(8px);
+  box-shadow:0 1px 0 var(--border);
+}
+header .container-xxl{
+  padding-top: .65rem;
+  padding-bottom: .65rem;
+}
+
+.brand-name{ color:#2a2a2a; font-size:1.45rem; letter-spacing:.2px; }
+.brand-name:hover{ color:#000; text-decoration:none; }
+
+.nav-underline .nav-link{
+  color:#626e6b;
+  padding:.6rem .9rem;                 /* slightly slimmer */
+  border-bottom:2px solid transparent;
+  transition:color .15s ease,border-color .15s ease;
+}
+.nav-underline .nav-link:hover{ color:#1f2a29; }
+.nav-underline .nav-link.active{ color:#1f2a29; border-color:#1f2a29; }
+
+/* ================= HERO (photo + headline) ================= */
+/* tighten top/bottom and center items so photo + text align vertically */
+#about{ padding: 2rem 0; }
+#about .row{
+  --bs-gutter-x: 2rem;
+  align-items: center;                 /* key: vertical centering */
+}
+
+/* keep photo near the text column (no drifting to far left) */
+#about .col-lg-4{
+  display:flex;
+  justify-content:center;              /* balances left column */
+}
+
+/* your chosen photo scale (kept) + light frame */
+.hero-photo{
+  width: 260px;                         /* fixed width; keeps aspect ratio */
+  height: 400px;
+  border: 1px solid rgba(0,0,0,.05);
+  border-radius: .6rem;
+  box-shadow: 0 .5rem 1.25rem rgba(0,0,0,.08);
+}
+
+/* headline block centered beside the image and not too wide */
+#about .col-lg-8{
+  display:flex;
+  align-items:center;
+  justify-content:center;              /* centers the text block */
+}
+
+.hero-title{
+  color:var(--ink);
+  text-align:center;
+  letter-spacing:.2px;
+  line-height:1.2;
+  font-weight:500;
+  max-width: 600px;                    /* prevents “too wide” lines */
+  margin:0;
+  font-size: clamp(1.45rem, 1.0rem + 0.9vw, 2.20rem);  /* ~23–35px */
+}
+
+@media (min-width:1400px){
+  .hero-title{ font-size: 2.20rem; }   /* never balloons on very wide screens */
+}
+
+/* ================= “Nice to Meet You” band ================= */
+.band{
+  background:var(--band);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.section-title{ color:var(--ink-2); font-weight:600; letter-spacing:.3px; }
+.content-narrow{ max-width:980px; }
+.content-narrow p{ font-size:1.06rem; line-height:1.9; color:#22302e; }
+
+/* ================= cards / sections ================= */
+.card-soft{
+  border:1px solid rgba(0,0,0,.07);
+  border-radius:.75rem;
+  box-shadow:0 .25rem 1rem rgba(0,0,0,.04);
+}
+section h3{ color:#1f2a29; }
+
+/* ================= links ================= */
+a{ color:#145a52; }
+a:hover{ color:#0e3f3a; }
+
+/* ================= footer ================= */
+.footer{ background:var(--footer); color:#fff; }
+.footer a{ color:#cfe8e5; text-decoration:underline; }
+.footer a:hover{ color:#fff; }
+.footer .icon-link{ color:#e7f4f2; }
+.footer .icon-link:hover{ color:#fff; }
+
+/* ================= misc ================= */
+.border-bottom{ border-color:var(--border) !important; }
+img{ max-width:100%; height:auto; }
+
+/* ================= mobile tweaks ================= */
+@media (max-width: 991.98px){
+  #about .row{ --bs-gutter-x: 1.25rem; }
+  .hero-photo{ width: 240px; }
+  .hero-title{ font-size: clamp(1.35rem, 1.05rem + 0.7vw, 1.9rem); }
+}
+
+/* ===== Education banner + layout ===== */
+.section-banner{
+  background: var(--footer);            /* deep teal */
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.banner-title{
+  color: #e9efee;
+  font-weight: 600;
+  letter-spacing: .5px;
+  font-size: clamp(1.6rem, 1.2rem + 1vw, 2.4rem);
+}
+
+.edu-wrap{ background: var(--band); }
+
+.edu-logo{
+  width: 260px;                         /* adjust as needed per logo */
+  max-width: 100%;
+  height: auto;
+  border-radius: .35rem;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 .35rem 1rem rgba(0,0,0,.06);
+}
+
+/* text styling */
+.edu-school{ color: var(--ink); font-weight: 700; }
+.edu-degree{ color: #0d3b37; font-weight: 700; }
+.edu-meta li{ color: #2a3c39; margin-bottom: .25rem; }
+
+/* separator line tone */
+#education .border-bottom{ border-color: rgba(0,0,0,.12) !important; }
+
+/* mobile tweaks */
+@media (max-width: 767.98px){
+  .edu-logo{ width: 220px; }
+}
+
+/* ===== Skills section ===== */
+.skills-wrap{ background: var(--band); }
+
+/* tagline + subtext */
+.skills-tagline{
+  color: var(--ink-2);
+  font-weight: 600;
+  letter-spacing: .3px;
+  font-size: clamp(1.4rem, 1.1rem + .6vw, 2rem);
+  margin-bottom: .25rem;
+}
+.skills-subtle{
+  color: #314845;
+  margin: 0;
+}
+
+/* resume button (deep-teal pill) */
+.btn-resume{
+  background: var(--footer);
+  color: #e9efee;
+  border: none;
+  border-radius: .5rem;
+}
+.btn-resume:hover{ color: #fff; background: #163f3b; }
+
+/* column headers */
+.skill-head{
+  color: var(--ink);
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+
+/* custom square bullets like the screenshot */
+.skill-list{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.skill-list li{
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: .6rem;
+  color: #1f3431;
+}
+.skill-list li::before{
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--ink);
+  border-radius: 1px;            /* slightly rounded square */
+  position: absolute;
+  left: 0;
+  top: .6em;
+}
+
+/* spacing on large screens like the reference */
+#skills .row{ --bs-gutter-x: 3rem; }
+
+/* mobile tweaks */
+@media (max-width: 991.98px){
+  #skills .row{ --bs-gutter-x: 1.25rem; }
+}
+
+/* ===== Internships section ===== */
+.intern-wrap{ background: var(--band); }
+
+/* card container */
+
+/* === Fix: make internship title strip match section background === */
+.intern-card,
+.intern-card .intern-head{
+  background: transparent !important;   /* kill the white card */
+  box-shadow: none !important;
+  backdrop-filter: none;
+  border-radius: 0 !important;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Optional: keep a clean divider between internships */
+.intern-card{
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+/* If you had added a title bar background anywhere, neutralize it */
+.intern-role{
+  background: transparent !important;
+  display: block;
+  padding: 0;
+}
+
+.intern-card{
+  background: transparent;
+  padding: 1.5rem 0 2.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+/* header: role + company on left, logo on right */
+.intern-head{ margin-bottom: 1rem; }
+.intern-role{
+  color: var(--ink);
+  font-weight: 800;
+  font-size: clamp(1.25rem, 1.05rem + .5vw, 1.6rem);
+  margin-bottom: .25rem;
+}
+.intern-company{
+  color: #0d3b37;
+  font-weight: 700;
+}
+
+/* right-aligned logo */
+.intern-logo{
+  width: 140px;           /* adjust per logo */
+  height: auto;
+  background:var(--page);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: .35rem;
+  box-shadow: 0 .35rem 1rem rgba(0,0,0,.06);
+}
+
+/* body text + subheads */
+.intern-project{
+  color: var(--ink);
+  font-weight: 700;
+  margin: 1rem 0 1rem;
+}
+.intern-subhead{
+  color: var(--ink);
+  font-weight: 800;
+  margin-top: 1.25rem;
+  margin-bottom: .5rem;
+}
+
+/* square bullets (same style used in Skills) */
+.bullet-sq{
+  list-style: none;
+  padding-left: 0;
+}
+.bullet-sq li{
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: .6rem;
+  color: #1f3431;
+}
+.bullet-sq li::before{
+  content: "";
+  width: 7px; height: 7px;
+  background: var(--ink);
+  border-radius: 1px;
+  position: absolute; left: 0; top: .6em;
+}
+
+/* responsive tweaks */
+@media (max-width: 991.98px){
+  .intern-logo{ width: 110px; }
+}
+
+/* ===== Projects ===== */
+.projects-wrap{ background: var(--band); }
+
+/* grid spacing like the screenshots */
+#projects .row{ --bs-gutter-x: 3rem; }
+@media (max-width: 991.98px){ #projects .row{ --bs-gutter-x: 1.25rem; } }
+
+/* card layout */
+
+.proj-thumb{
+  display: block;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 .5rem 1.25rem rgba(0,0,0,.08);
+}
+.proj-thumb img{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;    /* gives the wide image look */
+  object-fit: cover;
+}
+
+/* title link style (underlined like reference) */
+.proj-title{
+  font-size: clamp(1.15rem, 1.05rem + .3vw, 1.45rem);
+  font-weight: 700;
+  margin: 1rem 0 .5rem;
+  text-align: center;
+}
+.proj-title a{
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.proj-title a:hover{ color: #0e3f3a; }
+
+/* short description */
+.proj-desc{
+  color:#1f3431;
+  margin: 0;
+  line-height: 1.7;
+}
+
+
