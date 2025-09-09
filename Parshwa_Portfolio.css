@@ -1,4 +1,3 @@
-/* ================= base palette ================= */
 :root{
   --ink:#1f6b63;      /* teal headings */
   --ink-2:#215a55;    /* section titles */
@@ -20,7 +19,7 @@ body.bg-page{
 /* Anchor targets don’t hide under sticky header */
 section{ scroll-margin-top: 72px; }
 
-/* ================= header / nav ================= */
+
 /* sticky, even spacing, and subtle blur so it “sits” above the hero */
 header{
   position: sticky;
@@ -47,7 +46,7 @@ header .container-xxl{
 .nav-underline .nav-link:hover{ color:#1f2a29; }
 .nav-underline .nav-link.active{ color:#1f2a29; border-color:#1f2a29; }
 
-/* ================= HERO (photo + headline) ================= */
+
 /* tighten top/bottom and center items so photo + text align vertically */
 #about{ padding: 2rem 0; }
 #about .row{
@@ -85,14 +84,14 @@ header .container-xxl{
   font-weight:500;
   max-width: 600px;                    /* prevents “too wide” lines */
   margin:0;
-  font-size: clamp(1.45rem, 1.0rem + 0.9vw, 2.20rem);  /* ~23–35px */
+  font-size: clamp(1.45rem, 1.0rem + 0.9vw, 2.20rem);  
 }
 
 @media (min-width:1400px){
   .hero-title{ font-size: 2.20rem; }   /* never balloons on very wide screens */
 }
 
-/* ================= “Nice to Meet You” band ================= */
+
 .band{
   background:var(--band);
   border-top:1px solid var(--border);
@@ -102,7 +101,7 @@ header .container-xxl{
 .content-narrow{ max-width:980px; }
 .content-narrow p{ font-size:1.06rem; line-height:1.9; color:#22302e; }
 
-/* ================= cards / sections ================= */
+
 .card-soft{
   border:1px solid rgba(0,0,0,.07);
   border-radius:.75rem;
@@ -110,29 +109,29 @@ header .container-xxl{
 }
 section h3{ color:#1f2a29; }
 
-/* ================= links ================= */
+
 a{ color:#145a52; }
 a:hover{ color:#0e3f3a; }
 
-/* ================= footer ================= */
+
 .footer{ background:var(--footer); color:#fff; }
 .footer a{ color:#cfe8e5; text-decoration:underline; }
 .footer a:hover{ color:#fff; }
 .footer .icon-link{ color:#e7f4f2; }
 .footer .icon-link:hover{ color:#fff; }
 
-/* ================= misc ================= */
+
 .border-bottom{ border-color:var(--border) !important; }
 img{ max-width:100%; height:auto; }
 
-/* ================= mobile tweaks ================= */
+
 @media (max-width: 991.98px){
   #about .row{ --bs-gutter-x: 1.25rem; }
   .hero-photo{ width: 240px; }
   .hero-title{ font-size: clamp(1.35rem, 1.05rem + 0.7vw, 1.9rem); }
 }
 
-/* ===== Education banner + layout ===== */
+
 .section-banner{
   background: var(--footer);            /* deep teal */
   border-bottom: 1px solid rgba(0,0,0,.08);
@@ -169,7 +168,7 @@ img{ max-width:100%; height:auto; }
   .edu-logo{ width: 220px; }
 }
 
-/* ===== Skills section ===== */
+
 .skills-wrap{ background: var(--band); }
 
 /* tagline + subtext */
@@ -232,12 +231,12 @@ img{ max-width:100%; height:auto; }
   #skills .row{ --bs-gutter-x: 1.25rem; }
 }
 
-/* ===== Internships section ===== */
+
 .intern-wrap{ background: var(--band); }
 
 /* card container */
 
-/* === Fix: make internship title strip match section background === */
+
 .intern-card,
 .intern-card .intern-head{
   background: transparent !important;   /* kill the white card */
@@ -328,7 +327,7 @@ img{ max-width:100%; height:auto; }
   .intern-logo{ width: 110px; }
 }
 
-/* ===== Projects ===== */
+
 .projects-wrap{ background: var(--band); }
 
 /* grid spacing like the screenshots */
