@@ -1,3 +1,4 @@
+    /* Author: Parshwa Gandhi | SWE 642 HW2 */
     :root { --gmu-green:#006633; --gmu-yellow:#FFCC33; }
     body { background:#f2f3f3; }               /* light gray page background */
     h1 { color: var(--gmu-green); }            /* GMU green h1 rule */

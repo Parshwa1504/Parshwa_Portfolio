@@ -1,9 +1,11 @@
+/* Author: Parshwa Gandhi | SWE 642 HW2 */
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CS Department Survey — Parshwa Gandhi</title>
+  <!-- Author: Parshwa Gandhi | SWE 642 HW2 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="Parshwa_Portfolio.css" rel="stylesheet">
@@ -11,31 +13,32 @@
 </head>
 <body class="bg-page">
 
-  <!-- Nav -->
-  <header class="border-bottom bg-white">
-    <div class="container-xxl py-3 d-flex align-items-center justify-content-between gap-3">
-      <a href="iParshwa_Portfolio.html" class="brand-name text-decoration-none fw-semibold">Parshwa Gandhi</a>
-      <nav class="d-none d-md-block">
-        <ul class="nav nav-underline small fw-medium">
+  <!-- Bootstrap Dark Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-xxl">
+      <a class="navbar-brand fw-semibold" href="Parshwa_Portfolio.html">Parshwa Gandhi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsurvey" aria-controls="navbarsurvey" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsurvey">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
           <li class="nav-item"><a class="nav-link" href="Parshwa_Portfolio.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="CS_Department.html">CS Department</a></li>
-          <li class="nav-item"><a class="nav-link active" href="survey.html">Survey</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="survey.html">Survey</a></li>
         </ul>
-      </nav>
-      <button class="btn btn-outline-dark btn-sm d-md-none" data-bs-toggle="collapse" data-bs-target="#mnav">
-        <i class="bi bi-list"></i>
-      </button>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <main class="container-xxl my-4">
     <div class="cs-heading-box mb-4">
       <h1 class="mb-2">GMU CS Department Campus Visit Survey</h1>
-      <p class="mb-0">Please share feedback about your visit. Fields marked with <strong>*</strong> are required.</p>
+      <p class="mb-1">Please share feedback about your visit. Fields marked with <strong>*</strong> are required.</p>
+      <div id="greeting" class="alert alert-info py-2 px-3 mb-0 small" role="alert"></div>
     </div>
 
     <!-- The Survey Form -->
-    <form id="csSurvey" class="needs-validation" autocomplete="on">
+    <form id="csSurvey" class="needs-validation" autocomplete="on" novalidate>
       <div class="row g-4">
         <!-- Left column -->
         <div class="col-12 col-lg-6">
@@ -49,18 +52,19 @@
             <input type="text" id="address" name="address" class="form-control" placeholder="1234 University Dr" required>
           </div>
 
-          <div class="row g-3">
+          <div class="row g-3 align-items-end">
             <div class="col-6">
-              <label for="city" class="form-label req">City</label>
-              <input type="text" id="city" name="city" class="form-control" placeholder="Fairfax" required>
+              <label class="form-label req">City</label>
+              <div id="city" class="form-control bg-light" aria-live="polite" aria-atomic="true"></div>
             </div>
             <div class="col-3">
-              <label for="state" class="form-label req">State</label>
-              <input type="text" id="state" name="state" class="form-control" placeholder="VA" required>
+              <label class="form-label req">State</label>
+              <div id="state" class="form-control bg-light" aria-live="polite" aria-atomic="true"></div>
             </div>
             <div class="col-3">
               <label for="zip" class="form-label req">ZIP</label>
-              <input type="text" id="zip" name="zip" class="form-control" placeholder="22030" pattern="\\d{5}" required>
+              <input type="text" id="zip" name="zip" class="form-control" placeholder="22030" pattern="\d{5}" required>
+              <div id="zipMsg" class="form-text text-danger small"></div>
             </div>
           </div>
 
@@ -83,6 +87,22 @@
           <div class="mt-3">
             <label for="surveyDate" class="form-label req">Date of Survey</label>
             <input type="date" id="surveyDate" name="surveyDate" class="form-control" required>
+          </div>
+
+          <!-- Data, Average, Maximum -->
+          <div class="mt-4">
+            <label for="dataNumbers" class="form-label req">Data (enter exactly ten numbers between 1–100, comma-separated)</label>
+            <input type="text" id="dataNumbers" name="dataNumbers" class="form-control" placeholder="e.g., 10,23,45,67,89,12,34,56,78,90" required>
+            <div class="row g-3 mt-1">
+              <div class="col-6">
+                <label class="form-label">Average</label>
+                <input type="text" id="avgOut" class="form-control" readonly>
+              </div>
+              <div class="col-6">
+                <label class="form-label">Maximum</label>
+                <input type="text" id="maxOut" class="form-control" readonly>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -145,14 +165,16 @@
         </div>
       </div>
 
-      <div class="text-center mt-4">
+      <div class="text-center mt-4 d-flex gap-3 justify-content-center">
         <button type="submit" class="btn btn-success px-4" style="background:#006633;border-color:#006633;">
           Submit Survey
         </button>
+        <button type="reset" class="btn btn-outline-secondary px-4">Reset</button>
         <a href="CS_Department.html" class="btn btn-link">Back to CS Department</a>
       </div>
     </form>
   </main>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="survey.js"></script>
 </body>

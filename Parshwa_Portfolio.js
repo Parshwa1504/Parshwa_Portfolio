@@ -1,3 +1,4 @@
+/* Author: Parshwa Gandhi | SWE 642 HW2 */
 // Smooth-scroll for same-page nav links
 document.querySelectorAll('a.nav-link[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {

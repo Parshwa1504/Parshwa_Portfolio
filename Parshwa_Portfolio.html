@@ -1,413 +1,368 @@
+/* Author: Parshwa Gandhi | SWE 642 HW2 */
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Parshwa Gandhi</title>
-
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons (for LinkedIn/GitHub) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- styles -->
-  <link href="Parshwa_Portfolio.css" rel="stylesheet">
+<!-- Author: Parshwa Gandhi | SWE 642 HW2 -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Parshwa Gandhi</title>
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Bootstrap Icons (for LinkedIn/GitHub) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+<!-- styles -->
+<link href="Parshwa_Portfolio.css" rel="stylesheet"/>
 </head>
 <body class="bg-page">
+<!-- Top header / nav -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container-xxl">
+    <a class="navbar-brand fw-semibold" href="Parshwa_Portfolio.html">Parshwa Gandhi</a>
 
-  <!-- Top header / nav -->
-  <header class="border-bottom bg-white">
-    <div class="container-xxl py-3 d-flex align-items-center justify-content-between gap-3">
-      <a href="#" class="brand-name text-decoration-none fw-semibold">Parshwa Gandhi</a>
-      <nav class="d-none d-md-block">
-        <ul class="nav nav-underline small fw-medium">
-          <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#internships">Internships</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="CS_Department.html">CS Department</a></li>
-        </ul>
-      </nav>
-      <button class="btn btn-outline-dark btn-sm d-md-none" data-bs-toggle="collapse" data-bs-target="#mnav">
-        <i class="bi bi-list"></i>
-      </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navhome"
+            aria-controls="navhome" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navhome">
+      <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+        <!-- in-page anchors keep working -->
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#internships">Internships</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <!-- cross-page links -->
+        <li class="nav-item"><a class="nav-link" href="CS_Department.html">CS Department</a></li>
+        <li class="nav-item"><a class="nav-link" href="survey.html">Survey</a></li>
+      </ul>
     </div>
-
-    <!-- mobile nav -->
-    <div id="mnav" class="collapse border-top d-md-none">
-      <div class="container-xxl py-2">
-        <ul class="nav flex-column small">
-          <li class="nav-item"><a class="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target="#mnav">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education" data-bs-toggle="collapse" data-bs-target="#mnav">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills" data-bs-toggle="collapse" data-bs-target="#mnav">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#internships" data-bs-toggle="collapse" data-bs-target="#mnav">Internships</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects" data-bs-toggle="collapse" data-bs-target="#mnav">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="CS_Department.html">CS Department</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
-
-  <!-- About -->
-  <section id="about" class="container-xxl py-5">
-    <div class="row align-items-start g-5">
-      <div class="col-12 col-lg-4">
-        <img src="Images/Parshwa.jpg" alt="Parshwa Gandhi" class="img-fluid rounded shadow-sm hero-photo">
-      </div>
-      <div class="col-12 col-lg-8">
-        <h1 class="display-5 lh-sm hero-title">
+  </div>
+</nav>
+<!-- About -->
+<section class="container-xxl py-5" id="about">
+<div class="row align-items-start g-5">
+<div class="col-12 col-lg-4">
+<img alt="Parshwa Gandhi" class="img-fluid rounded shadow-sm hero-photo" src="Images/Parshwa.jpg"/>
+</div>
+<div class="col-12 col-lg-8">
+<h1 class="display-5 lh-sm hero-title">
           Hi! I’m a <span class="fw-semibold">Computer Science</span> graduate student at
           <span class="fw-semibold">George Mason University</span>, focused on data engineering , data analytics and Machine Learning.
         </h1>
-      </div>
-    </div>
-  </section>
-
-  <!-- Intro -->
-  <section class="band">
-    <div class="container-xxl py-5">
-      <h2 class="text-center mb-4 section-title">Nice to Meet You!</h2>
-      <div class="mx-auto content-narrow">
-        <p>
+</div>
+</div>
+</section>
+<!-- Intro -->
+<section class="band">
+<div class="container-xxl py-5">
+<h2 class="text-center mb-4 section-title">Nice to Meet You!</h2>
+<div class="mx-auto content-narrow">
+<p>
           I’m Parshwa Gandhi, an MS in Computer Science student at George Mason University.As someone deeply passionate about data and problem-solving, I thrive at the intersection of data engineering, analytics, and cloud technologies. I’m currently pursuing my Master’s in Computer Science at George Mason University, with a focus on building intelligent data-driven systems that solve real-world problems at scale.
         </p>
-        <p>
+<p>
           Over the past few years, I’ve worked on multiple hands-on projects and internships that span the entire data lifecycle, from data ingestion and transformation to machine learning model deployment and dashboarding. My approach combines solid programming foundations with a business-first mindset, ensuring that every solution I build is both technically sound and insight-driven.
         </p>
-        <p>
+<p>
           Some highlights of my work include engineering a high-performing Credit Card Fraud Detection model using advanced ensemble methods such as CatBoost, LightGBM, and XGBoost, achieving an AUC-ROC of 0.9593 and an F1-score of 0.8070. I also built a complete ETL pipeline and interactive Power BI dashboard for a Coffee Sales dataset with over 149,000 records, delivering actionable insights for business strategy. In another project, I designed a real-time Driver Drowsiness Detection system using OpenCV and a CNN model to identify eye states and issue timely alerts. Additionally, I’ve developed and deployed multiple web applications and predictive models on AWS, leveraging services like EC2, Lambda, and S3 for scalability. My experience also includes extensive data cleaning, statistical modeling, and visual reporting using Python libraries (Pandas, NumPy, Matplotlib), SQL, and Excel.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-  <!-- dark banner -->
-  <div class="section-banner">
-    <div class="container-xxl py-4">
-      <h1 class="banner-title m-0 text-center">Education</h1>
-    </div>
-  </div>
-
-  <!-- gray body -->
-  <div class="edu-wrap">
-    <div class="container-xxl py-5">
-
-      <!-- GMU -->
-      <div class="edu-item row g-4 align-items-center mb-5 pb-4 border-bottom">
-        <div class="col-12 col-md-5 col-lg-4 d-flex justify-content-center">
-          <img class="edu-logo" src="Images/George_Mason_University_logo.png" alt="George Mason University">
-        </div>
-        <div class="col-12 col-md-7 col-lg-8">
-          <h4 class="edu-school mb-2">George Mason University, Fairfax, USA</h4>
-          <h5 class="edu-degree mb-3">Master of Science in Computer Science</h5>
-          <ul class="list-unstyled mb-0 small edu-meta">
-            <li><strong>Aug 2024 – May 2026</strong></li>
-            <li>GPA: <em>3.28</em></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Undergraduate -->
-      <div class="edu-item row g-4 align-items-center">
-        <div class="col-12 col-md-5 col-lg-4 d-flex justify-content-center">
-          <img class="edu-logo" src="Images/PDEU logo.jpeg" alt="Undergraduate University">
-        </div>
-        <div class="col-12 col-md-7 col-lg-8">
-          <h4 class="edu-school mb-2">Pandit Deendayal Energy University (PDEU), India</h4>
-          <h5 class="edu-degree mb-3">Bachelor of Technology in Computer Engineering</h5>
-          <ul class="list-unstyled mb-0 small edu-meta">
-            <li><strong>Aug 2020 – May 2024</strong></li>
-            <li>GPA: <em>8.86</em></li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
+</div>
+</div>
 </section>
-
+<section id="education">
+<!-- dark banner -->
+<div class="section-banner">
+<div class="container-xxl py-4">
+<h1 class="banner-title m-0 text-center">Education</h1>
+</div>
+</div>
+<!-- gray body -->
+<div class="edu-wrap">
+<div class="container-xxl py-5">
+<!-- GMU -->
+<div class="edu-item row g-4 align-items-center mb-5 pb-4 border-bottom">
+<div class="col-12 col-md-5 col-lg-4 d-flex justify-content-center">
+<img alt="George Mason University" class="edu-logo" src="Images/George_Mason_University_logo.png"/>
+</div>
+<div class="col-12 col-md-7 col-lg-8">
+<h4 class="edu-school mb-2">George Mason University, Fairfax, USA</h4>
+<h5 class="edu-degree mb-3">Master of Science in Computer Science</h5>
+<ul class="list-unstyled mb-0 small edu-meta">
+<li><strong>Aug 2024 – May 2026</strong></li>
+<li>GPA: <em>3.28</em></li>
+</ul>
+</div>
+</div>
+<!-- Undergraduate -->
+<div class="edu-item row g-4 align-items-center">
+<div class="col-12 col-md-5 col-lg-4 d-flex justify-content-center">
+<img alt="Undergraduate University" class="edu-logo" src="Images/PDEU logo.jpeg"/>
+</div>
+<div class="col-12 col-md-7 col-lg-8">
+<h4 class="edu-school mb-2">Pandit Deendayal Energy University (PDEU), India</h4>
+<h5 class="edu-degree mb-3">Bachelor of Technology in Computer Engineering</h5>
+<ul class="list-unstyled mb-0 small edu-meta">
+<li><strong>Aug 2020 – May 2024</strong></li>
+<li>GPA: <em>8.86</em></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="skills">
-  <!-- dark banner -->
-  <div class="section-banner">
-    <div class="container-xxl py-4">
-      <h1 class="banner-title m-0 text-center">Skills</h1>
-    </div>
-  </div>
-
-  <!-- resume button -->
-  <div class="skills-wrap">
-    <div class="container-xxl py-5">
-      <div class="text-center mb-4">
-        <h2 class="skills-tagline">Let's make an impact together.</h2>
-        <p class="skills-subtle">
+<!-- dark banner -->
+<div class="section-banner">
+<div class="container-xxl py-4">
+<h1 class="banner-title m-0 text-center">Skills</h1>
+</div>
+</div>
+<!-- resume button -->
+<div class="skills-wrap">
+<div class="container-xxl py-5">
+<div class="text-center mb-4">
+<h2 class="skills-tagline">Let's make an impact together.</h2>
+<p class="skills-subtle">
           I am actively looking for full-time roles. Feel free to contact me!
         </p>
-      </div>
-
-      <div class="d-flex justify-content-center mb-5">
-        <!-- replace assets/resume.pdf with your file -->
-        <a class="btn btn-resume px-5 py-2" href="Parshwa_Resume.pdf" target="_blank" rel="noopener">
+</div>
+<div class="d-flex justify-content-center mb-5">
+<!-- replace assets/resume.pdf with your file -->
+<a class="btn btn-resume px-5 py-2" href="Parshwa_Resume.pdf" rel="noopener" target="_blank">
           Resume
         </a>
-      </div>
-
-      <!-- 4-column grid -->
-      <div class="row g-5">
-        <div class="col-12 col-md-6 col-lg-3">
-          <h5 class="skill-head">Data Engineering</h5>
-          <ul class="skill-list">
-            <li>SQL, Python</li>
-            <li>dbt, Airflow, Mage AI</li>
-            <li>Kafka, MLflow, Docker</li>
-            <li>BigQuery, Snowflake, Redshift</li>
-            <li>ETL/ELT, Data Modeling</li>
-          </ul>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-3">
-          <h5 class="skill-head">Analytics & BI</h5>
-          <ul class="skill-list">
-            <li>Tableau, Power BI, Looker Studio</li>
-            <li>Pandas, NumPy</li>
-            <li>Matplotlib, Seaborn</li>
-            <li>Excel (Pivot, Power Query)</li>
-            <li>A/B Testing, KPI Design</li>
-          </ul>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-3">
-          <h5 class="skill-head">Machine Learning</h5>
-          <ul class="skill-list">
-            <li>scikit-learn, XGBoost</li>
-            <li>Feature Engineering</li>
-            <li>Model Eval & Tracking</li>
-            <li>RAG / LLM (basics)</li>
-            <li>Time-series & Forecasting</li>
-          </ul>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-3">
-          <h5 class="skill-head">Cloud & Dev</h5>
-          <ul class="skill-list">
-            <li>AWS (S3, EC2, Lambda, RDS)</li>
-            <li>GCP (GCS, BigQuery)</li>
-            <li>Git/GitHub, CI/CD</li>
-            <li>Linux, Bash</li>
-            <li>Streamlit / basic React</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+<!-- 4-column grid -->
+<div class="row g-5">
+<div class="col-12 col-md-6 col-lg-3">
+<h5 class="skill-head">Data Engineering</h5>
+<ul class="skill-list">
+<li>SQL, Python</li>
+<li>dbt, Airflow, Mage AI</li>
+<li>Kafka, MLflow, Docker</li>
+<li>BigQuery, Snowflake, Redshift</li>
+<li>ETL/ELT, Data Modeling</li>
+</ul>
+</div>
+<div class="col-12 col-md-6 col-lg-3">
+<h5 class="skill-head">Analytics &amp; BI</h5>
+<ul class="skill-list">
+<li>Tableau, Power BI, Looker Studio</li>
+<li>Pandas, NumPy</li>
+<li>Matplotlib, Seaborn</li>
+<li>Excel (Pivot, Power Query)</li>
+<li>A/B Testing, KPI Design</li>
+</ul>
+</div>
+<div class="col-12 col-md-6 col-lg-3">
+<h5 class="skill-head">Machine Learning</h5>
+<ul class="skill-list">
+<li>scikit-learn, XGBoost</li>
+<li>Feature Engineering</li>
+<li>Model Eval &amp; Tracking</li>
+<li>RAG / LLM (basics)</li>
+<li>Time-series &amp; Forecasting</li>
+</ul>
+</div>
+<div class="col-12 col-md-6 col-lg-3">
+<h5 class="skill-head">Cloud &amp; Dev</h5>
+<ul class="skill-list">
+<li>AWS (S3, EC2, Lambda, RDS)</li>
+<li>GCP (GCS, BigQuery)</li>
+<li>Git/GitHub, CI/CD</li>
+<li>Linux, Bash</li>
+<li>Streamlit / basic React</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-
 <section id="internships">
-  <!-- dark banner -->
-  <div class="section-banner">
-    <div class="container-xxl py-4">
-      <h1 class="banner-title m-0 text-center">Internships</h1>
-    </div>
-  </div>
-
-  <!-- gray body -->
-  <div class="intern-wrap">
-    <div class="container-xxl py-5">
-
-      <article class="intern-card">
-        <header class="intern-head d-flex align-items-center justify-content-between gap-3">
-          <div>
-            <h2 class="intern-role m-0">ML Product Engineer Intern</h2>
-            <div class="intern-company">Aorbis Inc • East Hartford, CT</div>
-          </div>
-          <img class="intern-logo" src="Images/AORBIS-Logo.png" alt="Aorbis Inc">
-        </header>
-
-        <div class="intern-body">
-          
-          <h4 class="intern-subhead">Key Contributions</h4>
-          <ul class="bullet-sq">
-            <li>Contributed to an LLM-based email summarization and Q&A pipeline (Mistral), analyzing Real time project based
+<!-- dark banner -->
+<div class="section-banner">
+<div class="container-xxl py-4">
+<h1 class="banner-title m-0 text-center">Internships</h1>
+</div>
+</div>
+<!-- gray body -->
+<div class="intern-wrap">
+<div class="container-xxl py-5">
+<article class="intern-card">
+<header class="intern-head d-flex align-items-center justify-content-between gap-3">
+<div>
+<h2 class="intern-role m-0">ML Product Engineer Intern</h2>
+<div class="intern-company">Aorbis Inc • East Hartford, CT</div>
+</div>
+<img alt="Aorbis Inc" class="intern-logo" src="Images/AORBIS-Logo.png"/>
+</header>
+<div class="intern-body">
+<h4 class="intern-subhead">Key Contributions</h4>
+<ul class="bullet-sq">
+<li>Contributed to an LLM-based email summarization and Q&amp;A pipeline (Mistral), analyzing Real time project based
             emails for summaries and queries.</li>
-            <li>Assisted in optimizing model inference by testing GPU-based deployment, which showed potential to reduce response
+<li>Assisted in optimizing model inference by testing GPU-based deployment, which showed potential to reduce response
             time by 50% compared to CPU runs.</li>
-            <li>Supported a Open CV pipeline (Faster R-CNN, YOLO) to detect and classify doors in architectural site plans.</li>
-            <li>Collaborated with senior engineers to debug model outputs and fine-tune detection accuracy, improving consistency of
-            results by 20% across test datasets.</li>   
-        </ul>
-        </div>
-      </article>
-
-      <!-- ===== Xcellence-IT ===== -->
-      <article class="intern-card">
-        <header class="intern-head d-flex align-items-center justify-content-between gap-3">
-          <div>
-            <h2 class="intern-role m-0">Software Developer Intern</h2>
-            <div class="intern-company">Xcellence-IT • Surat, India</div>
-          </div>
-          <img class="intern-logo" src="Images/Xcellence-IT-logo.png" alt="Xcellence-IT">
-        </header>
-
-        <div class="intern-body">
-          
-
-          <h4 class="intern-subhead">Key Contributions</h4>
-          <ul class="bullet-sq">
-            <li>Improved attendance tracking accuracy by 30% by implementing a face recognition-based system using Python,
+<li>Supported a Open CV pipeline (Faster R-CNN, YOLO) to detect and classify doors in architectural site plans.</li>
+<li>Collaborated with senior engineers to debug model outputs and fine-tune detection accuracy, improving consistency of
+            results by 20% across test datasets.</li>
+</ul>
+</div>
+</article>
+<!-- ===== Xcellence-IT ===== -->
+<article class="intern-card">
+<header class="intern-head d-flex align-items-center justify-content-between gap-3">
+<div>
+<h2 class="intern-role m-0">Software Developer Intern</h2>
+<div class="intern-company">Xcellence-IT • Surat, India</div>
+</div>
+<img alt="Xcellence-IT" class="intern-logo" src="Images/Xcellence-IT-logo.png"/>
+</header>
+<div class="intern-body">
+<h4 class="intern-subhead">Key Contributions</h4>
+<ul class="bullet-sq">
+<li>Improved attendance tracking accuracy by 30% by implementing a face recognition-based system using Python,
             OpenCV, InsightFace, and Redis.</li>
-            <li>Reduced manual data entry time by 40% by developing a Streamlit web application for user registration and data
+<li>Reduced manual data entry time by 40% by developing a Streamlit web application for user registration and data
             onboarding.</li>
-            <li>Enhanced live monitoring capabilities by creating a real-time facial detection dashboard using Python, Pandas, and
+<li>Enhanced live monitoring capabilities by creating a real-time facial detection dashboard using Python, Pandas, and
             Streamlit.</li>
-            <li>Automated attendance reporting and analytics by building a data visualization module using Pandas and Matplotlib.</li>
-            <li>Achieved high scalability and reliability by deploying the entire solution on AWS (EC2 and S3) with cloud-based data
+<li>Automated attendance reporting and analytics by building a data visualization module using Pandas and Matplotlib.</li>
+<li>Achieved high scalability and reliability by deploying the entire solution on AWS (EC2 and S3) with cloud-based data
             management and backup.</li>
-          </ul>
-        </div>
-      </article>
-
-    </div>
-  </div>
+</ul>
+</div>
+</article>
+</div>
+</div>
 </section>
-
-
 <section id="projects">
-  <!-- dark banner -->
-  <div class="section-banner">
-    <div class="container-xxl py-4">
-      <h1 class="banner-title m-0 text-center">Projects</h1>
-    </div>
-  </div>
-
-  <!--gray body -->
-  <div class="projects-wrap">
-    <div class="container-xxl py-5">
-      <div class="row g-5">
-
-        <!-- 1) Scalable Taxi Analytics  -->
-        <div class="col-12 col-lg-6">
-          <article class="project-card">
-            <a class="proj-thumb" href="#" target="_blank" rel="noopener">
-              <img src="Images/Uber_logo.png" alt="Scalable Taxi Analytics">
-            </a>
-            <h3 class="proj-title">
-              <a href="#" target="_blank" rel="noopener">
+<!-- dark banner -->
+<div class="section-banner">
+<div class="container-xxl py-4">
+<h1 class="banner-title m-0 text-center">Projects</h1>
+</div>
+</div>
+<!--gray body -->
+<div class="projects-wrap">
+<div class="container-xxl py-5">
+<div class="row g-5">
+<!-- 1) Scalable Taxi Analytics  -->
+<div class="col-12 col-lg-6">
+<article class="project-card">
+<a class="proj-thumb" href="#" rel="noopener" target="_blank">
+<img alt="Scalable Taxi Analytics" src="Images/Uber_logo.png"/>
+</a>
+<h3 class="proj-title">
+<a href="#" rel="noopener" target="_blank">
                 Scalable Data Pipeline for Real-Time Taxi Analytics
               </a>
-            </h3>
-            <p class="proj-desc">
-              End-to-end ETL on 10M+ trips with Python + Mage AI on GCP (BigQuery/GCS), with Looker Studio dashboards for demand & revenue KPIs.
+</h3>
+<p class="proj-desc">
+              End-to-end ETL on 10M+ trips with Python + Mage AI on GCP (BigQuery/GCS), with Looker Studio dashboards for demand &amp; revenue KPIs.
             </p>
-          </article>
-        </div>
-
-        <!-- 2) Real-Time Fraud Detection -->
-        <div class="col-12 col-lg-6">
-          <article class="project-card">
-            <a class="proj-thumb" href="#" target="_blank" rel="noopener">
-              <img src="Images/Real_Time_Fraud_Detection_image.png" alt="Real-Time Fraud Detection">
-            </a>
-            <h3 class="proj-title">
-              <a href="#" target="_blank" rel="noopener">
+</article>
+</div>
+<!-- 2) Real-Time Fraud Detection -->
+<div class="col-12 col-lg-6">
+<article class="project-card">
+<a class="proj-thumb" href="#" rel="noopener" target="_blank">
+<img alt="Real-Time Fraud Detection" src="Images/Real_Time_Fraud_Detection_image.png"/>
+</a>
+<h3 class="proj-title">
+<a href="#" rel="noopener" target="_blank">
                 Real-Time Fraud Detection Data Pipeline
               </a>
-            </h3>
-            <p class="proj-desc">
-              Streaming ingestion (Kafka/Mage/Docker) processing 1M+ tx/day, ETL to Neo4j & MLflow, Grafana for live anomaly monitoring.
+</h3>
+<p class="proj-desc">
+              Streaming ingestion (Kafka/Mage/Docker) processing 1M+ tx/day, ETL to Neo4j &amp; MLflow, Grafana for live anomaly monitoring.
             </p>
-          </article>
-        </div>
-
-        <!-- 3) Coffee Retail Sales Insights -->
-        <div class="col-12 col-lg-6">
-          <article class="project-card">
-            <a class="proj-thumb" href="#" target="_blank" rel="noopener">
-              <img src="Images/Coffee_Shop_image.jpg" alt="Coffee Retail Sales Insights">
-            </a>
-            <h3 class="proj-title">
-              <a href="https://github.com/Parshwa1504/Coffee-Shop-Sales-Analysis" target="_blank" rel="noopener">
+</article>
+</div>
+<!-- 3) Coffee Retail Sales Insights -->
+<div class="col-12 col-lg-6">
+<article class="project-card">
+<a class="proj-thumb" href="#" rel="noopener" target="_blank">
+<img alt="Coffee Retail Sales Insights" src="Images/Coffee_Shop_image.jpg"/>
+</a>
+<h3 class="proj-title">
+<a href="https://github.com/Parshwa1504/Coffee-Shop-Sales-Analysis" rel="noopener" target="_blank">
                 Data-Driven Sales Insights (Coffee Retail)
               </a>
-            </h3>
-            <p class="proj-desc">
+</h3>
+<p class="proj-desc">
               SQL ETL on 149k+ transactions with interactive Power BI KPIs (product, store, seasonal trends).
             </p>
-          </article>
-        </div>
-
-        <!-- 4) Credit Card Default Detection -->
-        <div class="col-12 col-lg-6">
-          <article class="project-card">
-            <a class="proj-thumb" href="https://github.com/Parshwa1504/Credit-Card-Default-Detection" target="_blank" rel="noopener">
-              <img src="Images/American_Express_logo.png" alt="Credit Card Default Detection">
-            </a>
-            <h3 class="proj-title">
-              <a href="https://github.com/Parshwa1504/Credit-Card-Default-Detection" target="_blank" rel="noopener">
+</article>
+</div>
+<!-- 4) Credit Card Default Detection -->
+<div class="col-12 col-lg-6">
+<article class="project-card">
+<a class="proj-thumb" href="https://github.com/Parshwa1504/Credit-Card-Default-Detection" rel="noopener" target="_blank">
+<img alt="Credit Card Default Detection" src="Images/American_Express_logo.png"/>
+</a>
+<h3 class="proj-title">
+<a href="https://github.com/Parshwa1504/Credit-Card-Default-Detection" rel="noopener" target="_blank">
                 Credit Card Default Detection
               </a>
-            </h3>
-            <p class="proj-desc">
+</h3>
+<p class="proj-desc">
               Supervised learning to predict default risk; feature engineering, model comparison, and evaluation.
             </p>
-          </article>
-        </div>
-
-        <!-- 5) Cricket Analytics -->
-        <div class="col-12 col-lg-6">
-          <article class="project-card">
-            <a class="proj-thumb" href="https://github.com/Parshwa1504/Cricket-Data-Analytics-Project-Using-Webscraping" target="_blank" rel="noopener">
-              <img src="Images/2022_ICC_Men's_T20_World_Cup_logo.png" alt="Cricket Data Analytics">
-            </a>
-            <h3 class="proj-title">
-              <a href="https://github.com/Parshwa1504/Cricket-Data-Analytics-Project-Using-Webscraping" target="_blank" rel="noopener">
+</article>
+</div>
+<!-- 5) Cricket Analytics -->
+<div class="col-12 col-lg-6">
+<article class="project-card">
+<a class="proj-thumb" href="https://github.com/Parshwa1504/Cricket-Data-Analytics-Project-Using-Webscraping" rel="noopener" target="_blank">
+<img alt="Cricket Data Analytics" src="Images/2022_ICC_Men's_T20_World_Cup_logo.png"/>
+</a>
+<h3 class="proj-title">
+<a href="https://github.com/Parshwa1504/Cricket-Data-Analytics-Project-Using-Webscraping" rel="noopener" target="_blank">
                 Cricket Data Analytics (Web-Scraping)
               </a>
-            </h3>
-            <p class="proj-desc">
-              Scrapes match/player stats, cleans data, and builds exploratory analytics & visuals.
+</h3>
+<p class="proj-desc">
+              Scrapes match/player stats, cleans data, and builds exploratory analytics &amp; visuals.
             </p>
-          </article>
-        </div>
-
-        <!-- 6) Driver Drowsiness Detection -->
-        <div class="col-12 col-lg-6">
-          <article class="project-card">
-            <a class="proj-thumb" href="https://github.com/Parshwa1504/Driver-Drowsiness-Detection-System" target="_blank" rel="noopener">
-              <img src="Images/Drowsiness_Detection_System_Image.jpeg" alt="Driver Drowsiness Detection">
-            </a>
-            <h3 class="proj-title">
-              <a href="https://github.com/Parshwa1504/Driver-Drowsiness-Detection-System" target="_blank" rel="noopener">
+</article>
+</div>
+<!-- 6) Driver Drowsiness Detection -->
+<div class="col-12 col-lg-6">
+<article class="project-card">
+<a class="proj-thumb" href="https://github.com/Parshwa1504/Driver-Drowsiness-Detection-System" rel="noopener" target="_blank">
+<img alt="Driver Drowsiness Detection" src="Images/Drowsiness_Detection_System_Image.jpeg"/>
+</a>
+<h3 class="proj-title">
+<a href="https://github.com/Parshwa1504/Driver-Drowsiness-Detection-System" rel="noopener" target="_blank">
                 Driver Drowsiness Detection System
               </a>
-            </h3>
-            <p class="proj-desc">
+</h3>
+<p class="proj-desc">
               Computer-vision pipeline to detect drowsiness from a webcam feed and trigger alerts.
             </p>
-          </article>
-        </div>
-
-      </div>
-    </div>
-  </div>
+</article>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-
-   <!-- Footer -->
-  <footer class="footer">
-    <div class="container-xxl py-5 text-center">
-      <p class="mb-1">
-        <a href="mailto:pgandhi6@gmu.edu">Email : pgandhi6@gmu.edu</a><br>
-        <span class="small" >+1 (917) 295-7252</span>
-      </p>
-      <div class="d-flex justify-content-center gap-3 fs-4 mt-3">
-        <a href="https://www.linkedin.com/in/gandhiparshwa/" class="icon-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/Parshwa1504" class="icon-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="Parshwa_Portfolio.js"></script>
+<!-- Footer -->
+<footer class="footer">
+<div class="container-xxl py-5 text-center">
+<p class="mb-1">
+<a href="mailto:pgandhi6@gmu.edu">Email : pgandhi6@gmu.edu</a><br/>
+<span class="small">+1 (917) 295-7252</span>
+</p>
+<div class="d-flex justify-content-center gap-3 fs-4 mt-3">
+<a aria-label="LinkedIn" class="icon-link" href="https://www.linkedin.com/in/gandhiparshwa/"><i class="bi bi-linkedin"></i></a>
+<a aria-label="GitHub" class="icon-link" href="https://github.com/Parshwa1504"><i class="bi bi-github"></i></a>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Parshwa_Portfolio.js"></script>
 </body>
 </html>
